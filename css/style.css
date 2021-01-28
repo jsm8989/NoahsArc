@@ -175,7 +175,7 @@ img {
 	padding: 0 10px;
 	position: relative;
 }
-/*
+
 #body.home .header div img.satellite {
 	display: block;
 	left: 10px;
@@ -257,7 +257,7 @@ img {
 	text-transform: uppercase;
 	width: 940px;
 }
-*/
+
 #body.home .header div ul {
 	display: inline-block;
 	list-style: none outside none;
