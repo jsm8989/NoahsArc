@@ -175,6 +175,7 @@ img {
 	padding: 0 10px;
 	position: relative;
 }
+/*
 #body.home .header div img.satellite {
 	display: block;
 	left: 10px;
@@ -295,6 +296,7 @@ img {
 	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
 	opacity: 0.7;
 }
+*/
 #body.home .body {
 	background-color: #630031;
 	margin: 0;
