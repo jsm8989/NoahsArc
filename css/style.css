@@ -1296,6 +1296,7 @@ img {
 	background-color: #620031;
 }
 /*----------------------------------------footer-styles---------------------------------------*/
+/*
 #footer {
 	margin: 0;
 	padding: 0;
@@ -1347,6 +1348,7 @@ img {
 	width: 18px;
 }
 */
+/*
 #footer .connect div div a.twitter {
 	background-position: 0 0;
 	margin: 0 0 0 16px;
@@ -1405,6 +1407,7 @@ img {
 	text-transform: uppercase;
 	width: 940px;
 }
+*/
 #wix {
 	max-width: 728px;
 	margin: 0 auto;
@@ -1413,7 +1416,7 @@ img {
 	width: 100%;
 }
 
-/* ADDED for the social footer */
+/* ADDED for the social footer - JAMIE*/
 .site-footer {
   background-color: #838383;
 	text-align: center;
@@ -1441,7 +1444,8 @@ img {
 .linkedin-icon,
 .googleplus-icon,
 .youtube-icon,
-.foursquare-icon{
+.foursquare-icon,
+.email-icon {
 	margin-top: .625em;
 	width: 40px;
 	height: 40px;
@@ -1456,7 +1460,8 @@ img {
 .linkedin-icon:hover,
 .googleplus-icon:hover,
 .youtube-icon:hover,
-.foursquare-icon:hover {
+.foursquare-icon:hover,
+.email-icon:hover {
 	opacity: 1.0;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
