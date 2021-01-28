@@ -249,7 +249,7 @@ img {
 	font-weight: normal;
 	line-height: 23px;
 	margin: 96px 0 0;
- *margin: 102px 0 0;/* Needed for IE8 and old versions */
+ *margin: 102px 0 0;
 	min-height: 27px;
 	padding: 17px 0 10px;
 	position: relative;
@@ -257,6 +257,7 @@ img {
 	text-transform: uppercase;
 	width: 940px;
 }
+*/
 #body.home .header div ul {
 	display: inline-block;
 	list-style: none outside none;
@@ -285,7 +286,7 @@ img {
 }
 #body.home .header div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -293,10 +294,10 @@ img {
 	width: auto;
 }
 #body.home .header div ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);
 	opacity: 0.7;
 }
-*/
+
 #body.home .body {
 	background-color: #630031;
 	margin: 0;
