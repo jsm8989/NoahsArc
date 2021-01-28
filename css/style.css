@@ -1335,6 +1335,7 @@ img {
 	padding: 0 0 0 20px;
 	width: 380px;
 }
+/*
 #footer .connect div div a {
 	background: url(../images/icons.png) no-repeat;
 	display: block;
@@ -1345,17 +1346,18 @@ img {
 	text-indent: -99999px;
 	width: 18px;
 }
-#footer .connect div div a.facebook {
+*/
+#footer .connect div div a.twitter {
 	background-position: 0 0;
 	margin: 0 0 0 16px;
 	width: 18px;
 }
-#footer .connect div div a.twitter {
+#footer .connect div div a.linkedin {
 	background-position: 0 -114px;
 	margin: 0 0 0 28px;
 	width: 44px;
 }
-#footer .connect div div a.googleplus {
+#footer .connect div div a.email {
 	background-position: 0 -38px;
 	margin: 0 0 0 27px;
 	width: 37px;
@@ -1365,13 +1367,13 @@ img {
 	margin: 0 0 0 29px;
 	width: 30px;
 }
-#footer .connect div div a.facebook:hover {
+#footer .connect div div a.twitter:hover {
 	background-position: -20px 0;
 }
-#footer .connect div div a.twitter:hover {
+#footer .connect div div a.linkedin:hover {
 	background-position: -46px -114px;
 }
-#footer .connect div div a.googleplus:hover {
+#footer .connect div div a.email:hover {
 	background-position: -38px -38px;
 }
 #footer .connect div div a.pinterest:hover {
