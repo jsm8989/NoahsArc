@@ -175,7 +175,7 @@ img {
 	padding: 0 10px;
 	position: relative;
 }
-
+/* */
 #body.home .header div img.satellite {
 	display: block;
 	left: 10px;
@@ -189,15 +189,15 @@ img {
 #body.home .header div h1 {
 	color: #FFFFFF;
 	display: block;
-	float: right;
+	
 	font-family: audiowide-regular-webfont;
 	font-size: 60px;
 	font-weight: normal;
 	line-height: 60px;
-	margin: 187px 0 27px;
-	padding: 0 38px 0 399px;
+	/*margin: 187px 0 27px;*/
+	padding: 38px 0;
 	position: relative;
-	text-align: right;
+	text-align: center;
 	text-transform: uppercase;
 	width: 503px;
 	z-index: 60;
@@ -205,15 +205,15 @@ img {
 #body.home .header div h2 {
 	color: #FFFFFF;
 	display: block;
-	float: right;
+	
 	font-family: Arial;
 	font-size: 43px;
 	font-weight: normal;
 	line-height: 43px;
-	margin: 0 0 36px;
-	padding: 0 146px 0 506px;
+	/*margin: 0 0 36px;*/
+	/*padding: 0 146px 0 506px;*/
 	position: relative;
-	text-align: right;
+	text-align: center;
 	text-transform: uppercase;
 	width: 288px;
 	z-index: 60;
@@ -222,14 +222,13 @@ img {
 	background-color: #000000;
 	color: #a3a3a3;
 	display: block;
-	float: right;
 	font-family: Arial;
 	font-size: 18px;
 	font-weight: normal;
 	height: 49px;
 	line-height: 49px;
-	margin: 0 200px 0 0;
-	padding: 0;
+	margin: auto;
+	/*padding: 100;*/
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
@@ -243,15 +242,15 @@ img {
 #body.home .header div h3 {
 	background: url("../images/bg-transparent1.png") repeat;
 	color: #A3A3A3;
-	float: left;
+	float:left;
 	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
 	margin: 96px 0 0;
- *margin: 102px 0 0;
+ /**margin: 102px 0 0;/* Needed for IE8 and old versions */
 	min-height: 27px;
-	padding: 17px 0 10px;
+	/*padding: 17px 0 10px;*/
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
@@ -286,7 +285,7 @@ img {
 }
 #body.home .header div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);
+	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -294,10 +293,9 @@ img {
 	width: auto;
 }
 #body.home .header div ul li a img:hover {
-	filter: alpha(opacity=70);
+	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
 	opacity: 0.7;
 }
-
 #body.home .body {
 	background-color: #630031;
 	margin: 0;
@@ -1339,7 +1337,6 @@ img {
 	padding: 0 0 0 20px;
 	width: 380px;
 }
-/*
 #footer .connect div div a {
 	background: url(../images/icons.png) no-repeat;
 	display: block;
@@ -1350,19 +1347,17 @@ img {
 	text-indent: -99999px;
 	width: 18px;
 }
-*/
-/*
-#footer .connect div div a.twitter {
+#footer .connect div div a.facebook {
 	background-position: 0 0;
 	margin: 0 0 0 16px;
 	width: 18px;
 }
-#footer .connect div div a.linkedin {
+#footer .connect div div a.twitter {
 	background-position: 0 -114px;
 	margin: 0 0 0 28px;
 	width: 44px;
 }
-#footer .connect div div a.email {
+#footer .connect div div a.googleplus {
 	background-position: 0 -38px;
 	margin: 0 0 0 27px;
 	width: 37px;
@@ -1372,18 +1367,19 @@ img {
 	margin: 0 0 0 29px;
 	width: 30px;
 }
-#footer .connect div div a.twitter:hover {
+#footer .connect div div a.facebook:hover {
 	background-position: -20px 0;
 }
-#footer .connect div div a.linkedin:hover {
+#footer .connect div div a.twitter:hover {
 	background-position: -46px -114px;
 }
-#footer .connect div div a.email:hover {
+#footer .connect div div a.googleplus:hover {
 	background-position: -38px -38px;
 }
 #footer .connect div div a.pinterest:hover {
 	background-position: -32px -76px;
 }
+*/
 #footer .footnote {
 	background-color: #FFFFFF;
 	margin: 0;
@@ -1410,7 +1406,7 @@ img {
 	text-transform: uppercase;
 	width: 940px;
 }
-*/
+
 #wix {
 	max-width: 728px;
 	margin: 0 auto;
@@ -1419,6 +1415,10 @@ img {
 	width: 100%;
 }
 
+
+
+
+/* ADDED BY JAMIE FOR FOOTER, and commented out previous footer styles */
 /* ADDED for the social footer - JAMIE*/
 .site-footer {
   background-color: #838383;
@@ -1475,4 +1475,106 @@ img {
 
 
 
+/* ATTEMPT 2 AT A TIMELINE */
+
+
+/* Set a background color 
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+} */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  left: 25%;
+}
+
+/* The circles on the timeline 
+.timeline .container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}*/
+
+/* Place the container to the left */
+.timeline .left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline .right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline .right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  text-align:center;
+}
 
