@@ -5,13 +5,21 @@ body {
 	position: relative;
 	width: auto;
 }
-body #page {
-	background: url("../images/bg-home.jpg") no-repeat scroll center top #000000;
+/*body #page {
+	background: url("https://research.msu.edu/wp-content/uploads/2015/03/space.jpg") no-repeat scroll center top #000000;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
 	width: auto;
 	z-index: 3;
+}*/
+body #page {
+  background-image: url("https://research.msu.edu/wp-content/uploads/2015/03/space.jpg"); /* The image used */
+  background-color: #000000; /* Used if the image is unavailable */
+  height: 100%; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 a {
 	text-decoration: none;
@@ -39,7 +47,7 @@ img {
 }
 #header div {
 	margin: 0 auto;
-	max-width: 940px;
+	max-width: 1000px;
 	min-height: 60px;
 	padding: 0 10px;
 }
@@ -50,12 +58,34 @@ img {
 	margin: 0 44px 0 0;
 	padding: 0;
 	width: 304px;
+	color:white;
 }
+/*#header div a.title-text {
+	display: block;
+	float: left;
+	text-align: left;
+	height: 100%;
+	margin: 0 44px 0 0;
+	padding: 0;
+	width: 304px;
+	color:white;
+}*/
 #header div a img {
 	display: block;
 	margin: 0;
 	padding: 0;
 	width: auto;
+}
+#header div a p {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 60px;
+	height: 60px;
+	width: auto;
+	position: relative;
+	float: right;
+	color: white;
 }
 #header div ul {
 	display: inline-block;
@@ -144,6 +174,63 @@ img {
 	background-color: #000000;
 	color: #a3a3a3;
 }
+
+
+
+/* EXPERIMENTAL BIT FOR BETTER DROPDOWN OPTIONS */
+/* Dropdown Button 
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}*/
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #620031;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  /*padding: 12px 16px;
+  text-decoration: none;*/
+  display: block;
+}
+
+/* Change color of dropdown links on hover 
+.dropdown-content a:hover {background-color: #ddd;}*/
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown 
+.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------body-home-styles---------------------------------------*/
 #body {
 	background-color: #000000;
@@ -1577,4 +1664,3 @@ body {
   border-radius: 6px;
   text-align:center;
 }
-
