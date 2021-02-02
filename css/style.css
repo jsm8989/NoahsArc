@@ -1,4 +1,12 @@
 /* Website template by freewebsitetemplates.com */
+
+/* NOTES: 
+   - an empty comment at the end of a line means i changed some parameter
+     (these may have the old values in)
+   - all the block commented sections labelled as "not used" only refers 
+     to the homepage. May need them later but makes the mobile transition 
+     much easier for now
+*/
 body {
 	margin: 0;
 	padding: 0;
@@ -47,7 +55,7 @@ img {
 }
 #header div {
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: 1000px; /* 1000px */
 	min-height: 60px;
 	padding: 0 10px;
 }
@@ -123,6 +131,7 @@ img {
 #header div ul li.selected a {
 	background-color: #000000;
 	color: #a3a3a3;
+	display:block;
 }
 #header div ul li.menu {
 	position: relative;
@@ -177,7 +186,10 @@ img {
 
 
 
-/* EXPERIMENTAL BIT FOR BETTER DROPDOWN OPTIONS */
+/* EXPERIMENTAL BIT FOR BETTER DROPDOWN OPTIONS 
+	- could make it so the selected menus are nicer
+	- also maybe some sort of delimiter between dropdown options
+	- we shall see */
 /* Dropdown Button 
 .dropbtn {
   background-color: #4CAF50;
@@ -257,12 +269,12 @@ img {
 }
 #body.home .header div {
 	margin: 0 auto;
-	max-width: 940px;
+	max-width: 100%; /* */
 	overflow: hidden;
 	padding: 0 10px;
 	position: relative;
 }
-/* */
+/* not in use 
 #body.home .header div img.satellite {
 	display: block;
 	left: 10px;
@@ -272,7 +284,7 @@ img {
 	top: 41px;
 	width: auto;
 	z-index: 50;
-}
+} */
 #body.home .header div h1 {
 	color: #FFFFFF;
 	display: block;
@@ -282,11 +294,11 @@ img {
 	font-weight: normal;
 	line-height: 60px;
 	/*margin: 187px 0 27px;*/
-	padding: 38px 0;
+	padding: 2% 2% 2%; /* */
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	width: 503px;
+	width: 90%; /* */
 	z-index: 60;
 }
 #body.home .header div h2 {
@@ -298,11 +310,11 @@ img {
 	font-weight: normal;
 	line-height: 43px;
 	/*margin: 0 0 36px;*/
-	/*padding: 0 146px 0 506px;*/
+	padding: 2% 0; /* */
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	width: 288px;
+	width: 40%; /* */
 	z-index: 60;
 }
 #body.home .header div a.more {
@@ -319,13 +331,14 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
-	width: 180px;
+	width: 15%;
 	z-index: 55;
 }
 #body.home .header div a.more:hover {
 	background-color: #ab000b;
 	color: #ffffff;
 }
+/* not used
 #body.home .header div h3 {
 	background: url("../images/bg-transparent1.png") repeat;
 	color: #A3A3A3;
@@ -335,15 +348,15 @@ img {
 	font-weight: normal;
 	line-height: 23px;
 	margin: 96px 0 0;
- /**margin: 102px 0 0;/* Needed for IE8 and old versions */
+ /**margin: 102px 0 0;/* Needed for IE8 and old versions
 	min-height: 27px;
-	/*padding: 17px 0 10px;*/
+	padding: 17px 0 10px;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
 	width: 940px;
-}
-
+}/* */
+/* not used
 #body.home .header div ul {
 	display: inline-block;
 	list-style: none outside none;
@@ -369,7 +382,7 @@ img {
 	margin: 0;
 	padding: 0;
 	width: 235px;
-}
+}*/
 #body.home .header div ul li a img {
 	cursor: pointer;
 	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
@@ -404,11 +417,11 @@ img {
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
-	margin: 0 auto 24px;
+	margin: 0 auto 2%; /* */
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 780px;
+	width: 40%; /* */
 }
 #body.home .body div p {
 	color: #ffffff;
@@ -420,7 +433,7 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	width: 780px;
+	width: 70%; /* */
 }
 #body.home .body div p a {
 	color: #ffffff;
@@ -444,10 +457,12 @@ img {
 }
 #body.home .footer div {
 	margin: 0 auto;
-	max-width: 960px;
+	text-align: center; /* MAY NEED CHECKING IN CASE TIMELINE GOES WEIRD*/
+	max-width: 90%; /* was 960px */
 	overflow: hidden;
 	padding: 32px 0 16px;
 }
+/* not used 
 #body.home .footer div ul {
 	display: inline-block;
 	list-style: none;
@@ -490,7 +505,7 @@ img {
 }
 #body.home .footer div ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);/* Needed for IE8 and old versions 
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -498,7 +513,7 @@ img {
 	width: auto;
 }
 #body.home .footer div ul li a:hover img {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);/* Needed for IE8 and old versions 
 	opacity: 0.7;
 }
 #body.home .footer div ul li a span {
@@ -547,7 +562,7 @@ img {
 }
 #body.home .footer div ul li ul li a img {
 	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=100);/* Needed for IE8 and old versions 
 	opacity: 1.0;
 	display: block;
 	margin: 0;
@@ -555,7 +570,7 @@ img {
 	width: auto;
 }
 #body.home .footer div ul li ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
+	filter: alpha(opacity=70);/* Needed for IE8 and old versions 
 	opacity: 0.7;
 }
 #body.home .footer div ul li ul li h1 {
@@ -603,20 +618,131 @@ img {
 }
 #body.home .footer div ul li ul li a.more:hover {
 	background-color: #620031;
+}*/
+
+/* ATTEMPT 2 AT A TIMELINE */
+
+
+/* Set a background color 
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+} */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
 }
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  left: 25%;
+}
+
+/* The circles on the timeline 
+.timeline .container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}*/
+
+/* Place the container to the left */
+.timeline .left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeline .right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeline .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeline .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeline .right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  text-align:center;
+}
+
 /*----------------------------------------body-styles---------------------------------------*/
 #body.about .header {
 	background: url(../images/bg-about.jpg) no-repeat center top #000000;
 	margin: 0;
-	min-height: 455px;
+	min-height: 50%; /* 450 px */
 	padding: 0;
 	width: 100%;
 }
+/*
 #body.about .header div, #body .header div {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 100%; /* 960 px
 	overflow: hidden;
-	padding: 65px 0 40px;
+	padding: 4% 0 2%; /*65px 0 40px 
+}*/
+#body.about .header div, #body .header div {
+	margin: 0 auto;
+	max-width: 80%; /* somehow this width is relevant for all non-home pages **/
+	overflow: hidden;
+	padding: 4% 0 2%; /* check this on mobile too */
 }
 #body.about .header div h1, #body .header div h1 {
 	color: #FFFFFF;
@@ -625,8 +751,7 @@ img {
 	font-size: 36px;
 	font-weight: normal;
 	line-height: 36px;
-	margin: 0 auto 87px;
-	padding: 0;
+	margin: 0 auto 10%; /* 83px*/
 	text-align: center;
 	text-transform: uppercase;
 	width: 940px;
@@ -638,11 +763,11 @@ img {
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
-	margin: 0 auto 24px;
+	margin: 0 auto 2.5%; /* 23px */
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 820px;
+	width: 70%; /*820px */
 }
 #body.about .header div p {
 	color: #ffffff;
@@ -654,8 +779,9 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	width: 820px;
+	width: 70%; /* 820px*/
 }
+/* for links on the about page - not currently in use */
 #body.about .header div p a {
 	color: #ffffff;
 	font-family: Arial;
@@ -672,14 +798,14 @@ img {
 #body.about .body {
 	background-color: #620031;
 	margin: 0;
-	min-height: 253px;
+	min-height: 10%; /*253px*/
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
 }
 #body.about .body div {
 	margin: 0 auto;
-	max-width: 940px;
+	max-width: 80%; /* */
 	overflow: hidden;
 	padding: 36px 10px 35px;
 }
@@ -694,7 +820,7 @@ img {
 	padding: 0;
 	text-align: left;
 	text-transform: uppercase;
-	width: 620px;
+	width: 60%; /* 620px */
 }
 #body.about .body div p {
 	color: #ffffff;
@@ -707,7 +833,7 @@ img {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	width: 620px;
+	width: 60%;
 }
 #body.about .body div p a {
 	color: #ffffff;
@@ -726,21 +852,21 @@ img {
 	display: block;
 	float: right;
 	margin: 0;
-	padding: 0;
+	padding: 2% 2% 2% 2%; /* */
 	width: auto;
 }
 #body.about .footer {
 	background-color: #000000;
 	margin: 0;
-	min-height: 366px;
+	min-height: 10%;
 	padding: 0;
 	width: 100%;
 }
 #body.about .footer div {
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 79px 0 0 10px;
-	width: 950px;
+	padding: 36px 10px 35px; /* 79px 0 0 10px */
+	width: 90%;
 }
 #body.about .footer div h2 {
 	color: #A3A3A3;
@@ -753,7 +879,7 @@ img {
 	padding: 0;
 	text-align: left;
 	text-transform: uppercase;
-	width: 557px;
+	width: 60%;
 }
 #body.about .footer div p {
 	color: #ffffff;
@@ -766,7 +892,7 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	text-align: left;
-	width: 557px;
+	width: 60%;
 }
 #body.about .footer div p a {
 	color: #ffffff;
@@ -785,19 +911,19 @@ img {
 	float: left;
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 2% 2% 2% 2%; /* */
 	width: auto;
 }
 #body.about .section {
 	background-color: #3c0f38;
 	margin: 0;
-	min-height: 234px;
+	min-height: 20%;
 	padding: 0;
 	width: auto;
 }
 #body.about .section div {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 90%;
 	overflow: hidden;
 	padding: 58px 0 55px;
 }
@@ -808,11 +934,11 @@ img {
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
-	margin: 0 auto 26px;
+	margin: 0 auto 3%;
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 780px;
+	width: 60%;
 }
 #body.about .section div p {
 	color: #ffffff;
@@ -824,7 +950,7 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
-	width: 780px;
+	width: 60%;
 }
 #body.about .section div p a {
 	color: #ffffff;
@@ -839,6 +965,22 @@ img {
 #body.about .section div p a:hover {
 	color: #a3a3a3;
 }
+
+/*********** END OF ABOUT SECTION ******************/
+
+
+/**************** SCIENCE PAGE ********************/
+#body.science .header {
+	background-color: #620031;
+	margin: 0;
+	min-height: 50%; /* 450 px */
+	padding: 0;
+	width: 100%;
+}
+/***************** END OF SCIENCE PAGE ****************/
+
+
+/* GENERAL */
 #body .header {
 	margin: 0 auto;
 	padding: 0;
@@ -993,6 +1135,22 @@ img {
 #body .header div p a:hover {
 	color: #a3a3a3;
 }
+
+
+/******************* BLOG PAGE AND POSTS *************************/
+#body.blog .header {
+	background-color: #620031;
+	margin: 0;
+	min-height: 50%; /* 450 px */
+	padding: 0;
+	width: 100%;
+}
+
+#body.blog .header div {
+	text-align:center;
+	padding: 0 auto 0 10%;
+}
+
 #body .header div .article {
 	float: left;
 	margin: 0 40px 0 10px;
@@ -1310,6 +1468,9 @@ img {
 #body .header div .article p a:hover {
 	color: #a3a3a3;
 }
+/************************ END OF BLOG PAGE AND POSTS**************************/
+
+
 #body .header .contact h2 {
 	color: #A3A3A3;
 	display: block;
@@ -1502,10 +1663,6 @@ img {
 	width: 100%;
 }
 
-
-
-
-/* ADDED BY JAMIE FOR FOOTER, and commented out previous footer styles */
 /* ADDED for the social footer - JAMIE*/
 .site-footer {
   background-color: #838383;
@@ -1558,109 +1715,4 @@ img {
 
 .footer-nav p {
 	text-align: center;
-}
-
-
-
-/* ATTEMPT 2 AT A TIMELINE */
-
-
-/* Set a background color 
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-} */
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.timeline .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  left: 25%;
-}
-
-/* The circles on the timeline 
-.timeline .container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}*/
-
-/* Place the container to the left */
-.timeline .left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.timeline .right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.timeline .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.timeline .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.timeline .right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.timeline .content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-  text-align:center;
 }
