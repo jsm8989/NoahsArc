@@ -13,14 +13,6 @@ body {
 	position: relative;
 	width: auto;
 }
-/*body #page {
-	background: url("https://research.msu.edu/wp-content/uploads/2015/03/space.jpg") no-repeat scroll center top #000000;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
-	z-index: 3;
-}*/
 body #page {
   background-image: url("https://research.msu.edu/wp-content/uploads/2015/03/space.jpg"); /* The image used */
   background-color: #000000; /* Used if the image is unavailable */
@@ -620,31 +612,28 @@ img {
 	background-color: #620031;
 }*/
 
+
+
 /* ATTEMPT 2 AT A TIMELINE */
+/* need to add a variation in mobile.css */
 
-
-/* Set a background color 
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-} */
-
-/* The actual timeline (the vertical ruler) */
+/* Timeline */
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: auto;
+  margin: 0;
 }
 
 /* The actual timeline (the vertical ruler) */
-.timeline::after {
+/* can remove if needed */
+.timeline::after { /* the :;after puts this stuff after any .timeline is called */
   content: '';
   position: absolute;
-  width: 6px;
+  width: 6px; /* could set to zero to make it disappear */
   background-color: white;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 50%; /* this is the left margin, placing the line in the center */
   margin-left: -3px;
 }
 
@@ -652,76 +641,24 @@ body {
 .timeline .container {
   padding: 10px 40px;
   position: relative;
-  background-color: inherit;
+  background-color: inherit; /* inherits from the .timeline class */
   width: 50%;
-  left: 25%;
-}
-
-/* The circles on the timeline 
-.timeline .container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}*/
-
-/* Place the container to the left */
-.timeline .left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.timeline .right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.timeline .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.timeline .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.timeline .right::after {
-  left: -16px;
+  left: 25%; /* setting to 0 seems to center, unlike above */
 }
 
 /* The actual content */
 .timeline .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: white; /* this is the box colour */
   position: relative;
   border-radius: 6px;
   text-align:center;
 }
+.footer .home-photos {
+	float:left;  
+	color:white;	
+}
+
 
 /*----------------------------------------body-styles---------------------------------------*/
 #body.about .header {
@@ -731,16 +668,9 @@ body {
 	padding: 0;
 	width: 100%;
 }
-/*
 #body.about .header div, #body .header div {
 	margin: 0 auto;
-	max-width: 100%; /* 960 px
-	overflow: hidden;
-	padding: 4% 0 2%; /*65px 0 40px 
-}*/
-#body.about .header div, #body .header div {
-	margin: 0 auto;
-	max-width: 80%; /* somehow this width is relevant for all non-home pages **/
+	max-width: 960px; /*960px*/ /* THIS WAS THE BLOG CENTERING PROBLEM */
 	overflow: hidden;
 	padding: 4% 0 2%; /* check this on mobile too */
 }
@@ -763,7 +693,7 @@ body {
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
-	margin: 0 auto 2.5%; /* 23px */
+	margin: 0 auto 23px; 
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -827,7 +757,7 @@ body {
 	display: block;
 	float: left;
 	font-family: Arial;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: normal;
 	line-height: 24px;
 	margin: 0;
@@ -838,7 +768,7 @@ body {
 #body.about .body div p a {
 	color: #ffffff;
 	font-family: Arial;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: normal;
 	line-height: 24px;
 	margin: 0;
@@ -976,7 +906,17 @@ body {
 	min-height: 50%; /* 450 px */
 	padding: 0;
 	width: 100%;
+	text-align:center;
 }
+#body.science .header div h1 { /* addded myself */
+	text-align:center;
+	max-width:90%;
+	padding: 0 auto 0 10%;
+}
+/*
+#body.science .header div ul li div h1 {
+	text-align:center;	
+}*/
 /***************** END OF SCIENCE PAGE ****************/
 
 
@@ -985,6 +925,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	width: 100%;
+	
 }
 #body .header div ul {
 	display: inline-block;
@@ -1138,18 +1079,21 @@ body {
 
 
 /******************* BLOG PAGE AND POSTS *************************/
-#body.blog .header {
+/*
+#body .header {
 	background-color: #620031;
 	margin: 0;
-	min-height: 50%; /* 450 px */
+	min-height: 50%; /* 450 px 
 	padding: 0;
 	width: 100%;
+	text-align:center;
 }
 
-#body.blog .header div {
+#body .header div {
 	text-align:center;
+	
 	padding: 0 auto 0 10%;
-}
+}*/
 
 #body .header div .article {
 	float: left;
