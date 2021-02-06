@@ -127,6 +127,7 @@ img {
 }
 #header div ul li.menu {
 	position: relative;
+	display: inline-block; /* */
 }
 #header div ul li.menu ul {
 	display: block;
@@ -136,25 +137,25 @@ img {
 	padding: 0;
 	position: absolute;
 	top: 60px;
-	width: 142px;
+	width: 142px; /* anotehr possible relevant width? */
 	z-index: 50;
 }
 #header div ul li.menu:hover ul.primary {
-	left: 31px;
+	left: 0;/* 31px */
 }
 #header div ul li.menu ul.primary.selected {
-	left: 31px;
+	left: 0; /* 31px*/
 }
 #header div ul li.menu:hover ul.secondary {
-	left: -20px;
+	left: 0; /* -20px*/
 }
 #header div ul li.menu ul.secondary.selected {
-	left: -20px;
+	left: 0; /* -20px*/
 }
 #header div ul li.menu ul li {
 	margin: 0;
 	padding: 0;
-	width: auto;
+	min-width: 180px; /* auto */
 }
 #header div ul li.menu ul li a {
 	background-color: #620031;
@@ -191,40 +192,40 @@ img {
   border: none;
 }*/
 
-/* The container <div> - needed to position the dropdown content */
+/* The container <div> - needed to position the dropdown content 
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (Hidden by Default) 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #620031;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000;
+  z-index: 2000;
 }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown 
 .dropdown-content a {
-  color: black;
+  /*color: black;
   /*padding: 12px 16px;
-  text-decoration: none;*/
+  text-decoration: none;
   display: block;
 }
 
 /* Change color of dropdown links on hover 
-.dropdown-content a:hover {background-color: #ddd;}*/
+.dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu on hover */
+/* Show the dropdown menu on hover 
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}*/
 
-
+/* no longer in use */
 
 
 
@@ -454,6 +455,7 @@ img {
 	overflow: hidden;
 	padding: 32px 0 16px;
 }
+
 /* not used 
 #body.home .footer div ul {
 	display: inline-block;
@@ -656,7 +658,16 @@ img {
 }
 .footer .home-photos {
 	float:left;  
-	color:white;	
+	color:white;
+	max-width:40%;
+}
+
+#body.home .footer .home-photos img { /* ADDED*/
+	margin: auto; 
+	
+	max-width: 40%; 
+	overflow: hidden;
+	padding: 32px 0 16px;
 }
 
 
@@ -667,6 +678,16 @@ img {
 	min-height: 50%; /* 450 px */
 	padding: 0;
 	width: 100%;
+}
+#body.about .header #esa div{ /* not currently working */
+	background-color: white;
+	margin: 0;
+	min-height: 50%; /* 450 px */
+	padding: 0;
+	width: 100%;
+}
+#body.about .body div .simpleList {
+	
 }
 #body.about .header div, #body .header div {
 	margin: 0 auto;
