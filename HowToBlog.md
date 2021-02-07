@@ -40,3 +40,7 @@ Sorry if that was a bit painful, if it is too much effort then I'm happy to conv
 
 If some of the image formatting comes out dodgy you could add some styles to the elements, a lot of the related elements have had a few things like `style="width:auto;"` in them, hopefully that will solve any problems!
 
+
+
+##### Once this is all going smoothly we can do other stuff like changing the featured posts and linking the science pages to relevant blog posts :)
+
