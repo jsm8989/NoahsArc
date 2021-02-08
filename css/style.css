@@ -1485,6 +1485,9 @@ img {
 	margin: 0;
 	padding: 0;
 	width: 340px;
+	position: -webkit-sticky;
+	position: sticky;
+	/* may need to check parent overflow or display types for this to work */
 }
 #body .header div .sidebar ul {
 	display: inline-block;
