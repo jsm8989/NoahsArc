@@ -1895,16 +1895,16 @@ img {
 }
 /* experimental - from w3schools*/
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: grey;
+  color: #620031;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: grey;
+  color: #620031;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: grey;
+  color: #620031;
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 /*
