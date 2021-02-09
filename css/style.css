@@ -324,7 +324,7 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	position: relative;
-	width: 15%;
+	width: 150px; /*could set as a min width instead*/
 	z-index: 55;
 }
 #body.home .header div a.more:hover {
