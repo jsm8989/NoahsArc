@@ -1909,6 +1909,18 @@ img {
 #body .header div form input#submit:hover {
 	background-color: #620031;
 }
+
+::-webkit-input-placeholder { /* Edge */
+  color: #620031;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #620031;
+}
+
+::placeholder {
+  color: #620031;
+}
 /*----------------------------------------footer-styles---------------------------------------*/
 /*
 #footer {
