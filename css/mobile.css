@@ -8,42 +8,27 @@
 }
 @media only screen and (max-width : 918px) {
 
-/* Timeline */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0;
-}
+
 
 /* The actual timeline (the vertical ruler) */
-/* can remove if needed */
-.timeline::after { /* the :;after puts this stuff after any .timeline is called */
-  content: '';
-  position: absolute;
-  width: 0px; /* could set to zero to make it disappear */
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%; /* this is the left margin, placing the line in the center */
-  margin-left: -3px;
+.timeline::after {
+  width: 0px; /* set to zero to make it disappear */
 }
 
-/* Container around content */
 .timeline .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit; /* inherits from the .timeline class */
-  width: 50%;
-  left: auto; /* setting to 0 seems to center, unlike above */
+  left: auto; 
 }
 
-/* The actual content */
-.timeline .content {
-  padding: 20px 30px;
-  background-color: white; /* this is the box colour */
-  position: relative;
-  border-radius: 6px;
-  text-align:center;
+
+
+#body.home .footer .home-photos {
+	float:none;  
+	color:white;
+	max-width:40%;
+}
+#body.home .footer .home-photos img { /* CHECK CENTERING OF THESE*/
+	display:block;
+	margin: 0 -20;
 }
 
 
