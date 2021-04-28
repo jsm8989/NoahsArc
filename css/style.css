@@ -1920,6 +1920,15 @@ img {
 	opacity:0.7;
 	
 }
+#body .header div .sponsors a {
+	color:white;	
+}
+#body .header div .sponsors a:hover {
+	color:blue;	
+}
+#body .header div .sponsors img:hover {
+	opacity:0.7;
+}
 
 ::-webkit-input-placeholder { /* Edge */
   color: #620031;
