@@ -1555,6 +1555,25 @@ img {
 	padding: 0;
 	width: 34px;
 }
+#body .header div .sidebar ul li a.more {
+	background-color: #3c0f38;
+	color: #ffffff;
+	display: block;
+	float: right;
+	/*font-family: Arial;*/
+	font-size: 14px;
+	font-weight: normal;
+	height: auto;
+	line-height: 31px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+#body .header div .sidebar ul li a.more:hover {
+	background-color: #620031;
+}
 #body .header div .sidebar ul li a img {
 	cursor: pointer;
 	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
