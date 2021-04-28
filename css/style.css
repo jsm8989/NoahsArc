@@ -1887,7 +1887,6 @@ img {
 	margin: 0 0 29px;
 	padding: 0 0 0 20px;
 	text-align: left;
-	text-transform: uppercase;
 	width: 441px;
 }
 #body .header div form textarea {
@@ -1905,28 +1904,21 @@ img {
 	padding: 15px 0 0 20px;
 	resize: none;
 	text-align: left;
-	text-transform: uppercase;
 	width: 441px;
 }
-#body .header div form input#submit {
-	background-color: #3c0f38;
-	color: #ffffff;
-	cursor: pointer;
-	display: block;
-	float: right;
-	/*font-family: Arial;*/
-	font-size: 14px;
-	font-weight: normal;
-	height: 31px;
-	line-height: 31px;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	text-transform: uppercase;
-	width: 120px;
-}
-#body .header div form input#submit:hover {
+#body .header div form button {
+	color: #A3A3A3;
 	background-color: #620031;
+	width: 120; 
+	height: auto;
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px
+}
+#body .header div form button:hover {
+	opacity:0.7;
+	
 }
 
 ::-webkit-input-placeholder { /* Edge */
