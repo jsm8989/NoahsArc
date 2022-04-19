@@ -3,7 +3,20 @@
  * the script stepper.py
  * 
  * this script is inspired by 
- * https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/arduino-code
+ * https://learn.adafruit.com/adafruit-arduino-lesson-16-stepper-motors/arduino-code.
+ *
+ *
+ * Currently, this works with an arudino uno (https://store.arduino.cc/products/arduino-uno-rev3/)
+ * and controls a single stepper motor (specifically 28BYJ-48 5V Stepper Motor + ULN2003 Motor Driver Board)
+ * via the pins below.
+ *
+ * This motor controls a syringe pump, the best way to describe it is through a video here:
+ * https://drive.google.com/file/d/1NBVGI3rdMyDDZzPux7d7JAyAq1FNVAgx/view?usp=sharing
+ *
+ * We would like to control more syringe pumps from the same arduino, ie connect multiple stepper motors to a single arduino
+ * and be able to control them independently in the same way as the current one is.
+ * 
+ * To anyone looking at this willing to help out, thank you!
 */
 
 #include <Stepper.h>
