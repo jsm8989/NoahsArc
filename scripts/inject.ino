@@ -96,7 +96,7 @@ void setup()
   // NB 5-20 seems like a working range
   motor.setupMotor(5);
 
-  // anotherMotor.setSpeed(10);
+  // anotherMotor.setupMotor(10);
 }
 
 void loop()
