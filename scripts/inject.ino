@@ -20,18 +20,21 @@
 */
 
 #include <Stepper.h>
-#include <array>
 
 class StepperMotor() : public Stepper
 {
 public:
-  using Pins = std::array<unsigned int, 4>;
 
-  StepperMotor(unsigned int stepsPerRevolution, const Pins& inPins)
-    : Stepper(stepsPerRevolution, inPins[0], inPins[1], inPins[2], inPins[3])
-    , _inPins(inPins)
+  StepperMotor(unsigned int stepsPerRevolution,
+    unsigned int inPin0, unsigned int inPin1, unsigned int inPin2, unsigned int inPin3)
+    : Stepper(stepsPerRevolution, inPin0, inPin1, inPin2, inPin3)
     , _stepsPerRevolution(stepsPerRevolution)
-  {}
+  {
+    _inPins[0] = inPin0;
+    _inPins[1] = inPin1;
+    _inPins[2] = inPin2;
+    _inPins[3] = inPin3;
+  }
 
   void setupMotor(unsigned int speed)
   {
@@ -44,17 +47,17 @@ public:
   }
 
 private:
-  Pins _inPins;
+  unsigned int _inPins[4];
   unsigned int _stepsPerRevolution;
 };
 
 
 // check order (as of 5.2.22 it was 2,3,5,4) - however it seems 2,5,3,4 is working
 // (cable dependent obviously, and with opposite permutation giving opposite motion)
-StepperMotor motor(512, {2, 5, 3, 4});
+StepperMotor motor(512, 2, 5, 3, 4);
 
 /* Another motor is made like (using pins 6,7,8,9 and the same 512 steps per revolution):
-StepperMotor anotherMotor(512, {6, 7, 8, 9});
+StepperMotor anotherMotor(512, 6, 7, 8, 9);
 */
 
 /**
