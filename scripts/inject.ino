@@ -21,7 +21,7 @@
 
 #include <Stepper.h>
 
-class StepperMotor() : public Stepper
+class StepperMotor : public Stepper
 {
 public:
 
@@ -56,9 +56,9 @@ private:
 // (cable dependent obviously, and with opposite permutation giving opposite motion)
 StepperMotor motor(512, 2, 5, 3, 4);
 
-/* Another motor is made like (using pins 6,7,8,9 and the same 512 steps per revolution):
+// Another motor is made like (using pins 6,7,8,9 and the same 512 steps per revolution):
 StepperMotor anotherMotor(512, 6, 7, 8, 9);
-*/
+
 
 /**
  * Matches a motor number to one of the above motors.
@@ -72,8 +72,8 @@ StepperMotor* SelectMotor(unsigned int motorNumber)
   }
   else if (motorNumber == 2)
   {
-    // return &anotherMotor;
-    return nullptr; // change this to the above line if anotherMotor is made above.
+    return &anotherMotor;
+    // return nullptr; // change this to the above line if anotherMotor is made above.
   }
   // else if (motorNumber == 3)
   // {
@@ -99,32 +99,64 @@ void setup()
   // NB 5-20 seems like a working range
   motor.setupMotor(5);
 
-  // anotherMotor.setupMotor(10);
+  anotherMotor.setupMotor(10);
 }
+
+StepperMotor* selectedMotor = nullptr;
+bool printInstruction = true;
 
 void loop()
 {
-  if (Serial.available())
+  if (!Serial.available() && !selectedMotor)
   {
-    Serial.print("Enter motor number:");
-    int motorNumber = Serial.parseInt();
-
-    StepperMotor* motor = SelectMotor(motorNumber);
-    if (motor == nullptr)
+    if (printInstruction)
     {
-      Serial.print("Did not find motor for motor number entered");
-      return;
+      Serial.println("Enter motor number:");
+      printInstruction = false;
     }
+  }
+  else if (!Serial.available()
+  {
+    if (printInstruction)
+    {
+      Serial.println("Enter number of steps to turn the motor:");
+      printInstruction = false;
+    }
+  }
+  else if (Serial.available() && !selectedMotor)
+  {
+      int motorNumber = Serial.parseInt();
 
-    Serial.print("Enter number of steps to turn the motor:");
-    int steps = Serial.parseInt();
+      selectedMotor = SelectMotor(motorNumber);
+      if (selectedMotor == nullptr)
+      {
+        Serial.print("Did not find motor for motor number entered:");
+        Serial.println(motorNumber);
+      }
+      else
+      {
+        Serial.print("Found motor for motor number:");
+        Serial.println(motorNumber);
+      }
 
-    Serial.print("Moving this many steps: ");
-    Serial.println(steps);
+      printInstruction = true;
+  }
+  else if (Serial.available())
+  {
+      int steps = Serial.parseInt();
 
-    motor->step(steps);
+      if (selectedMotor)
+      {
+        Serial.print("Moving this many steps:");
+        Serial.println(steps);
 
-    Serial.print("Motor moved by this many steps: ");
-    Serial.println(steps);
+        selectedMotor->step(steps);
+
+        Serial.print("Motor moved by this many steps:");
+        Serial.println(steps);
+      }
+
+      selectedMotor = nullptr;
+      printInstruction = true;
   }
 }
